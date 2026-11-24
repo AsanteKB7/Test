@@ -1,0 +1,23 @@
+import random
+print("===== Welcome to the Number Guessing Game! =====")
+total_attempts = 5
+used_attempts = 0
+remaining_attempts = total_attempts-used_attempts
+secret_number =(  
+print(random.randint(1, 100)))
+while used_attempts < total_attempts:
+    guess = int(input("Enter your guess: "))
+    used_attempts += 1
+    print("You have used a" ,used_attempts,"guess you now have", remaining_attempts,"left.")
+    if guess == secret_number:
+        print("Congratulations! You guessed the number.")
+        print( "The secret number was",secret_number)
+        break
+    elif guess < secret_number:
+        print("Too low! the number is higher.")
+        
+    else:
+        print("Too high! the number is lower .")
+else:
+    print("Game over! You ran out of attempts.")
+    print( "The secret number was",secret_number)
